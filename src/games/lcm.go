@@ -20,10 +20,10 @@ func lcm(a, b, c int) int {
 }
 
 func GenerateLCMQuestion() (string, string) {
-    rand.Seed(time.Now().UnixNano())
-    num1 := rand.Intn(100) + 1
-    num2 := rand.Intn(100) + 1
-    num3 := rand.Intn(100) + 1
+    r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	num1 := r.Intn(100) + 1
+	num2 := r.Intn(100) + 1
+	num3 := r.Intn(100) + 1
 
     question := fmt.Sprintf("%d %d %d", num1, num2, num3)
     correctAnswer := fmt.Sprintf("%d", lcm(num1, num2, num3))

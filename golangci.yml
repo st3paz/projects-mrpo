@@ -1,0 +1,14 @@
+linters:
+  enable:
+    - golint
+    - errcheck
+    - staticcheck
+    - goconst
+    - gofmt
+    - varcheck
+    - unused
+    - deadcode
+    - ineffassign
+
+run:
+  timeout: 5m

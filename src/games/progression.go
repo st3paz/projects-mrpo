@@ -8,10 +8,10 @@ import (
 )
 
 func GenerateGeometricProgression() (string, string) {
-    rand.Seed(time.Now().UnixNano())
-    length := rand.Intn(6) + 5 // length between 5 and 10
-    start := rand.Intn(10) + 1
-    ratio := rand.Intn(4) + 2
+    r := rand.New(rand.NewSource(time.Now().UnixNano()))
+    length := r.Intn(6) + 5 
+    start := r.Intn(10) + 1
+    ratio := r.Intn(4) + 2
 
     progression := make([]int, length)
     for i := 0; i < length; i++ {
